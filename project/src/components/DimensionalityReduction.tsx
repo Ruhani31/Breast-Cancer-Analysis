@@ -24,7 +24,7 @@ function DimensionalityReduction() {
         <div className="mt-8">
           <h3 className="text-lg font-semibold text-gray-800">Scree Plot</h3>
           <img
-            src="/images/Screeplo.png"
+            src="public\images\Screeplo.png"
             alt="PCA Scree Plot for Breast Cancer Dataset"
             className="w-full rounded-lg mt-3 shadow-md"
           />
