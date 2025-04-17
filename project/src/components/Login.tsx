@@ -16,22 +16,24 @@ function Login({ onLogin, onBack }: LoginProps) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
+    <div className="min-h-screen flex items-center justify-center bg-pink-50">
+      <div className="bg-white p-8 rounded-2xl shadow-xl w-96 border border-fuchsia-200">
         <button
           onClick={onBack}
-          className="mb-6 flex items-center text-gray-600 hover:text-gray-900"
+          className="mb-6 flex items-center text-pink-500 hover:text-pink-700 transition"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Home
         </button>
         <div className="flex items-center justify-center mb-6">
-          <Lock className="w-8 h-8 text-blue-600" />
+          <Lock className="w-10 h-10 text-pink-600" />
         </div>
-        <h2 className="text-2xl font-bold text-center mb-6">Data Science Project Login</h2>
+        <h2 className="text-2xl font-bold text-center text-pink-700 mb-6">
+          Data Science Project Login
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+            <label className="block text-fuchsia-700 text-sm font-semibold mb-2" htmlFor="username">
               Username
             </label>
             <input
@@ -39,12 +41,12 @@ function Login({ onLogin, onBack }: LoginProps) {
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+              className="w-full px-3 py-2 border border-fuchsia-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-400"
               placeholder="Enter username"
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+            <label className="block text-fuchsia-700 text-sm font-semibold mb-2" htmlFor="password">
               Password
             </label>
             <input
@@ -52,19 +54,19 @@ function Login({ onLogin, onBack }: LoginProps) {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+              className="w-full px-3 py-2 border border-fuchsia-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-400"
               placeholder="Enter password"
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+            className="w-full bg-pink-500 text-white py-2 px-4 rounded-xl hover:bg-pink-600 transition"
           >
             Sign In
           </button>
         </form>
-        <p className="text-sm text-gray-600 text-center mt-4">
-          Use username: admin, password: password
+        <p className="text-sm text-fuchsia-600 text-center mt-4">
+          Use username: <strong>admin</strong>, password: <strong>password</strong>
         </p>
       </div>
     </div>

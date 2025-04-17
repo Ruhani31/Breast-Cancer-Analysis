@@ -46,7 +46,7 @@ function ModelTraining() {
           GridSearchCV was used to optimize parameters like <code>max_depth</code>, <code>C</code>, and <code>n_neighbors</code> for each model.
         </p>
         <img
-          src="/images/hyperparameter-results.png"
+          src="/images/hyper.png"
           alt="Hyperparameter Tuning Results"
           className="w-full rounded-lg border border-gray-200"
         />
@@ -61,19 +61,19 @@ function ModelTraining() {
             <div className="grid grid-cols-2 gap-2">
               <div className="bg-pink-100 p-4 rounded text-center">
                 <p className="font-bold">True Positive</p>
-                <p>182</p>
+                <p>72</p>
               </div>
               <div className="bg-red-100 p-4 rounded text-center">
                 <p className="font-bold">False Positive</p>
-                <p>12</p>
+                <p>0</p>
               </div>
               <div className="bg-red-100 p-4 rounded text-center">
                 <p className="font-bold">False Negative</p>
-                <p>8</p>
+                <p>1</p>
               </div>
               <div className="bg-pink-100 p-4 rounded text-center">
                 <p className="font-bold">True Negative</p>
-                <p>178</p>
+                <p>41</p>
               </div>
             </div>
           </div>
@@ -82,19 +82,19 @@ function ModelTraining() {
             <div className="space-y-2 text-gray-700">
               <div className="flex justify-between">
                 <span>Accuracy:</span>
-                <span className="font-medium">96%</span>
+                <span className="font-medium">99.12%</span>
               </div>
               <div className="flex justify-between">
                 <span>Precision:</span>
-                <span className="font-medium">95%</span>
+                <span className="font-medium">99%</span>
               </div>
               <div className="flex justify-between">
                 <span>Recall:</span>
-                <span className="font-medium">96.7%</span>
+                <span className="font-medium">98%</span>
               </div>
               <div className="flex justify-between">
                 <span>F1 Score:</span>
-                <span className="font-medium">95.8%</span>
+                <span className="font-medium">99%</span>
               </div>
             </div>
           </div>
@@ -109,11 +109,11 @@ function ModelTraining() {
         </p>
         <div className="space-y-3">
           {[
-            { fold: 'Fold 1', score: 94 },
-            { fold: 'Fold 2', score: 96 },
-            { fold: 'Fold 3', score: 95 },
-            { fold: 'Fold 4', score: 97 },
-            { fold: 'Fold 5', score: 94 }
+            { fold: 'Fold 1', score: 96.4 },
+            { fold: 'Fold 2', score: 98.3},
+            { fold: 'Fold 3', score: 98.2},
+            { fold: 'Fold 4', score: 97.3},
+            { fold: 'Fold 5', score: 98.3}
           ].map((f, idx) => (
             <div key={idx} className="flex items-center">
               <span className="w-24 text-sm text-gray-600">{f.fold}:</span>

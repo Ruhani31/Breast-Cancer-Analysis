@@ -12,10 +12,14 @@ function DimensionalityReduction() {
         <div className="space-y-2">
           <h3 className="text-lg font-semibold text-gray-800">Explained Variance Ratio</h3>
           <div className="w-full h-4 bg-gray-200 rounded-full overflow-hidden">
-            <div className="h-full bg-pink-400 transition-all duration-500 ease-in-out" style={{ width: '95%' }}></div>
+            <div
+              className="h-full bg-pink-400 transition-all duration-500 ease-in-out"
+              style={{ width: '95%' }}
+            ></div>
           </div>
           <p className="text-sm text-gray-600">
-            The first 10 principal components explain approximately <span className="font-semibold text-pink-700">95%</span> of the total variance,
+            The first 10 principal components explain approximately{" "}
+            <span className="font-semibold text-pink-700">95%</span> of the total variance,
             enabling a significant dimensionality reduction without major information loss.
           </p>
         </div>
@@ -24,11 +28,13 @@ function DimensionalityReduction() {
         <div className="mt-8">
           <h3 className="text-lg font-semibold text-gray-800">Scree Plot</h3>
           <img
-            src="/images/Screeplo.png"
+            src="/images/variance.png"
             alt="PCA Scree Plot for Breast Cancer Dataset"
             className="w-full rounded-lg mt-3 shadow-md"
           />
-          <p className="text-sm text-gray-500 mt-2">The elbow point suggests that the top 10 components retain most of the information.</p>
+          <p className="text-sm text-gray-500 mt-2">
+            The elbow point suggests that the top 10 components retain most of the information.
+          </p>
         </div>
 
         {/* PCA Stats Summary */}
@@ -85,26 +91,20 @@ function DimensionalityReduction() {
           </div>
         </div>
 
-        {/* Before vs After PCA Visual Comparison */}
+        {/* PCA Visualization: Before vs After (Combined Image) */}
         <div className="mt-10">
           <h3 className="text-lg font-semibold text-gray-800">PCA Visualization: Before vs After</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-            <div className="bg-gray-50 p-4 rounded-xl shadow-sm">
-              <img
-                src="/images/pca_before.png"
-                alt="Before PCA: radius_mean vs texture_mean"
-                className="rounded-md w-full"
-              />
-              <p className="text-sm text-gray-600 mt-2">Original feature space using <strong>radius_mean</strong> and <strong>texture_mean</strong> with diagnosis color coding.</p>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-xl shadow-sm">
-              <img
-                src="/images/pca_after.png"
-                alt="After PCA: PC1 vs PC2"
-                className="rounded-md w-full"
-              />
-              <p className="text-sm text-gray-600 mt-2">PCA-transformed space using <strong>PC1</strong> and <strong>PC2</strong>, providing clearer separation between benign and malignant cases.</p>
-            </div>
+          <div className="bg-gray-50 p-4 rounded-xl shadow-sm mt-4">
+            <img
+              src="/images/screeplo.png"
+              alt="Combined PCA Visualization"
+              className="rounded-md w-full"
+            />
+            <p className="text-sm text-gray-600 mt-2">
+              The left side of the image represents the original feature space using <strong>radius_mean</strong> and{" "}
+              <strong>texture_mean</strong>, while the right side shows the PCA-transformed space using <strong>PC1</strong> and{" "}
+              <strong>PC2</strong>, which better separates benign and malignant samples.
+            </p>
           </div>
         </div>
       </div>
@@ -113,3 +113,4 @@ function DimensionalityReduction() {
 }
 
 export default DimensionalityReduction;
+

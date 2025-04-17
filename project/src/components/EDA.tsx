@@ -38,18 +38,18 @@ function EDA() {
       <div className="bg-[#fdf2f8] rounded-2xl shadow-lg p-6">
         <h2 className="text-2xl font-semibold text-[#ec4899] mb-4">2. Univariate Analysis</h2>
         <img
-          src="/images/boxplot_distribution.png"
+          src="/images/boxplot.png"
           alt="Boxplot of features"
           className="w-full rounded-xl shadow-sm border border-[#f9a8d4]"
         />
-        <p className="text-sm text-gray-600 mt-2">Boxplots showing the distribution and outliers for key features across malignant and benign classes.</p>
+        <p className="text-sm text-gray-600 mt-2">Boxplot showing the distribution and outliers for key features across malignant and benign classes.</p>
       </div>
 
       {/* Bivariate & Multivariate Analysis */}
       <div className="bg-[#fdf2f8] rounded-2xl shadow-lg p-6">
         <h2 className="text-2xl font-semibold text-[#ec4899] mb-4">3. Bivariate & Multivariate Analysis</h2>
         <img
-          src="/images/correlation_heatmap.png"
+          src="/images/heatmap.png"
           alt="Correlation Heatmap"
           className="w-full rounded-xl shadow-sm border border-[#f9a8d4]"
         />
@@ -75,11 +75,11 @@ function EDA() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <img
-              src="/images/histogram_radius_mean.png"
-              alt="Distribution of Radius Mean"
+              src="/images/histogram.png"
+              alt="Distribution of Numerical Features"
               className="w-full rounded-xl shadow-sm border border-[#f9a8d4]"
             />
-            <p className="text-sm text-gray-600 mt-1">Histogram of radius_mean across patients.</p>
+            <p className="text-sm text-gray-600 mt-1">Histograms of Numerical Features across patients.</p>
           </div>
           <div>
             <img
