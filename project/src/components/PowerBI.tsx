@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 
 function PowerBI() {
   // Replace this with your actual PowerBI dashboard URL
-  const powerBiDashboardUrl = "https://app.powerbi.com/your-dashboard-url";
+  const powerBiDashboardUrl = "https://app.powerbi.com/links/1e8E__a_aZ?ctid=23035d1f-133c-44b5-b2ad-b3aef17baaa1&pbi_source=linkShare";
 
   return (
     <div className="space-y-6">
