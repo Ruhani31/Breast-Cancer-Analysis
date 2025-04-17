@@ -7,29 +7,32 @@ function DimensionalityReduction() {
 
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-xl font-semibold mb-4">Principal Component Analysis (PCA)</h2>
-        
+
         <div className="space-y-4">
+          {/* Explained Variance */}
           <div>
             <h3 className="text-lg font-medium text-gray-800">Explained Variance Ratio</h3>
             <div className="mt-2 h-4 bg-gray-200 rounded-full overflow-hidden">
-              <div className="h-full bg-blue-600" style={{ width: '85%' }}></div>
+              <div className="h-full bg-blue-600" style={{ width: '93%' }}></div>
             </div>
             <p className="text-sm text-gray-600 mt-1">
-              First 3 components explain 85% of variance
+              First 3 principal components explain 93% of the total variance in the dataset.
             </p>
           </div>
 
+          {/* Scree Plot */}
           <div className="mt-6">
             <h3 className="text-lg font-medium text-gray-800">Scree Plot</h3>
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-              alt="PCA Scree Plot"
+              src="/images/Screeplo.png"
+              alt="PCA Scree Plot for Breast Cancer Dataset"
               className="w-full rounded-lg mt-2"
             />
           </div>
 
+          {/* Component Loadings */}
           <div className="mt-6">
-            <h3 className="text-lg font-medium text-gray-800">Component Loadings</h3>
+            <h3 className="text-lg font-medium text-gray-800">Top Feature Loadings</h3>
             <div className="overflow-x-auto mt-2">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead>
@@ -42,27 +45,34 @@ function DimensionalityReduction() {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feature 1</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.85</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.12</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.03</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">radius_mean</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.52</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.14</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.09</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feature 2</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.76</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.21</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.03</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">texture_mean</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.48</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.23</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.12</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feature 3</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.65</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.32</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">0.03</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">area_mean</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.43</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.17</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.15</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">concavity_mean</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.35</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.28</td>
+                    <td className="px-6 py-4 text-sm text-gray-900">0.19</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
+
         </div>
       </div>
     </div>
