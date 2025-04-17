@@ -4,60 +4,46 @@ function DataPreprocessing() {
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold text-gray-900">Data Preprocessing</h1>
-      
+
+      {/* 1. Data Loading */}
       <div className="bg-white rounded-lg shadow p-6">
-        <h2 className="text-xl font-semibold mb-4">1. Data Cleaning</h2>
+        <h2 className="text-xl font-semibold mb-4">1. Data Loading</h2>
         <p className="text-gray-600">
-          Ensured data consistency by:
+          Downloaded the dataset from Kaggle using <code>kagglehub</code> and loaded it into a Pandas DataFrame.
         </p>
+      </div>
+
+      {/* 2. Data Cleaning */}
+      <div className="bg-white rounded-lg shadow p-6">
+        <h2 className="text-xl font-semibold mb-4">2. Data Cleaning</h2>
+        <p className="text-gray-600">Performed the following steps to clean the data:</p>
         <ul className="list-disc ml-6 mt-2 text-gray-600">
-          <li>Removing unnecessary columns like 'id'</li>
-          <li>Converting diagnosis column to binary format (Malignant = 1, Benign = 0)</li>
-          <li>Ensuring no null values were present in the dataset</li>
+          <li>Checked for and removed null values and duplicates</li>
+          <li>Filled missing numerical values with column mean</li>
+          <li>Filled missing categorical values with column mode</li>
+          <li>Dropped the column <code>Unnamed: 32</code> due to irrelevance</li>
         </ul>
       </div>
 
+      {/* 3. Column Transformation */}
       <div className="bg-white rounded-lg shadow p-6">
-        <h2 className="text-xl font-semibold mb-4">2. Feature Engineering</h2>
+        <h2 className="text-xl font-semibold mb-4">3. Column Transformation</h2>
         <p className="text-gray-600">
-          Created additional meaningful features to improve model performance:
+          Converted the target column:
         </p>
         <ul className="list-disc ml-6 mt-2 text-gray-600">
-          <li>Area-Perimeter Interaction</li>
-          <li>Radius-Texture Ratio</li>
-          <li>Retained original features for comprehensive analysis</li>
+          <li>Transformed <code>diagnosis</code> from categorical to binary (Malignant = 1, Benign = 0)</li>
         </ul>
       </div>
 
+      {/* 4. Feature Scaling */}
       <div className="bg-white rounded-lg shadow p-6">
-        <h2 className="text-xl font-semibold mb-4">3. Feature Scaling</h2>
+        <h2 className="text-xl font-semibold mb-4">4. Feature Scaling</h2>
         <p className="text-gray-600">
-          Applied feature scaling to normalize feature values:
+          Applied normalization on numerical features to improve model accuracy:
         </p>
         <ul className="list-disc ml-6 mt-2 text-gray-600">
-          <li>Used <code>StandardScaler</code> to bring features to standard normal distribution</li>
-        </ul>
-      </div>
-
-      <div className="bg-white rounded-lg shadow p-6">
-        <h2 className="text-xl font-semibold mb-4">4. Dimensionality Reduction</h2>
-        <p className="text-gray-600">
-          Applied Principal Component Analysis (PCA) to reduce feature dimensionality:
-        </p>
-        <ul className="list-disc ml-6 mt-2 text-gray-600">
-          <li>Captured 95% variance using fewer principal components</li>
-          <li>Helped reduce noise and improve model performance</li>
-        </ul>
-      </div>
-
-      <div className="bg-white rounded-lg shadow p-6">
-        <h2 className="text-xl font-semibold mb-4">5. Data Splitting</h2>
-        <p className="text-gray-600">
-          Divided the dataset into training and testing sets using an 80:20 ratio:
-        </p>
-        <ul className="list-disc ml-6 mt-2 text-gray-600">
-          <li>Maintained class distribution with stratified sampling</li>
-          <li>Prepared separate sets for model evaluation</li>
+          <li>Used <code>StandardScaler</code> to standardize all numerical columns except the target variable</li>
         </ul>
       </div>
     </div>

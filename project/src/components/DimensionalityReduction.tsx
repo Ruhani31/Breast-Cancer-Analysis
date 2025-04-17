@@ -13,10 +13,10 @@ function DimensionalityReduction() {
           <div>
             <h3 className="text-lg font-medium text-gray-800">Explained Variance Ratio</h3>
             <div className="mt-2 h-4 bg-gray-200 rounded-full overflow-hidden">
-              <div className="h-full bg-blue-600" style={{ width: '93%' }}></div>
+              <div className="h-full bg-blue-600" style={{ width: '95%' }}></div>
             </div>
             <p className="text-sm text-gray-600 mt-1">
-              First 3 principal components explain 93% of the total variance in the dataset.
+              The top principal components together capture 95% of the total variance in the dataset.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ function DimensionalityReduction() {
             />
           </div>
 
-          {/* Component Loadings */}
+          {/* Top Feature Loadings */}
           <div className="mt-6">
             <h3 className="text-lg font-medium text-gray-800">Top Feature Loadings</h3>
             <div className="overflow-x-auto mt-2">
