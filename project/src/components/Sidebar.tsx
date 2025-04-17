@@ -16,9 +16,9 @@ function Sidebar({ activeSection, setActiveSection }: SidebarProps) {
   ];
 
   return (
-    <div className="w-64 bg-white shadow-md">
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-gray-800">Project Dashboard</h2>
+    <div className="w-64 bg-white shadow-lg rounded-lg">
+      <div className="p-4 border-b-2 border-fuchsia-700">
+        <h2 className="text-xl font-bold text-fuchsia-700">Breast Cancer Prediction</h2>
       </div>
       <nav className="mt-4">
         {menuItems.map((item) => {
@@ -27,10 +27,10 @@ function Sidebar({ activeSection, setActiveSection }: SidebarProps) {
             <button
               key={item.id}
               onClick={() => setActiveSection(item.id)}
-              className={`w-full flex items-center px-4 py-3 text-left ${
+              className={`w-full flex items-center px-4 py-3 text-left rounded-lg transition-colors ${
                 activeSection === item.id
-                  ? 'bg-blue-50 text-blue-600 border-r-4 border-blue-600'
-                  : 'text-gray-600 hover:bg-gray-50'
+                  ? 'bg-pink-100 text-fuchsia-700 border-l-4 border-fuchsia-700'
+                  : 'text-gray-600 hover:bg-pink-50'
               }`}
             >
               <Icon className="w-5 h-5 mr-3" />

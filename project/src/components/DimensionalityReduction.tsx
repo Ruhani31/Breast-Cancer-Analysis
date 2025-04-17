@@ -96,7 +96,7 @@ function DimensionalityReduction() {
           <h3 className="text-lg font-semibold text-gray-800">PCA Visualization: Before vs After</h3>
           <div className="bg-gray-50 p-4 rounded-xl shadow-sm mt-4">
             <img
-              src="/images/screeplo.png"
+              src="/images/Screeplo.png"
               alt="Combined PCA Visualization"
               className="rounded-md w-full"
             />
