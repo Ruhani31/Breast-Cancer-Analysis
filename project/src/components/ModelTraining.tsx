@@ -25,11 +25,11 @@ function ModelTraining() {
         <h2 className="text-xl font-semibold mb-4 text-fuchsia-500">2. Model Comparison</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            { name: 'Logistic Regression (Best)', acc: '96%' },
-            { name: 'Random Forest', acc: '94%' },
-            { name: 'SVM', acc: '93%' },
-            { name: 'KNN', acc: '91%' },
-            { name: 'Decision Tree', acc: '89%' }
+            { name: 'Logistic Regression (Best)', acc: '99.12%' },
+            { name: 'Random Forest', acc: '95.61%' },
+            { name: 'SVM', acc: '96.49%' },
+            { name: 'KNN', acc: '95.61%' },
+            { name: 'Decision Tree', acc: '92.11%' }
           ].map((model, idx) => (
             <div key={idx} className="p-4 border border-pink-100 rounded-xl bg-gray-50">
               <h3 className="font-medium text-pink-600">{model.name}</h3>
